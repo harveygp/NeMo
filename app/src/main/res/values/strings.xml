@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RPL</string>
+    <string name="Forgot_Password">Forgot Password ?</string>
+    <string name="Sign_In">SIGN IN</string>
+    <string name="Sign_Up">SIGN UP</string>
+
+</resources>
