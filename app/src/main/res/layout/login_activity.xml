@@ -27,6 +27,7 @@
                 android:background="@drawable/custom_input_bar"
                 android:drawableStart="@drawable/ic_baseline_person_24"
                 android:drawablePadding="20dp"
+                android:padding="10dp"
                 android:hint="Username"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -36,6 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:padding="10dp"
                 android:background="@drawable/custom_input_bar"
                 android:drawableStart="@drawable/ic_outline_lock_24"
                 android:drawablePadding="20dp"

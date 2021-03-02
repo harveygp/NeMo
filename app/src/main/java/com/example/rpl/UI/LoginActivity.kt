@@ -1,10 +1,12 @@
-package com.example.rpl
+package com.example.rpl.UI
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.rpl.R
+import com.example.rpl.UI.MainActivity
 import kotlinx.android.synthetic.main.login_activity.*
 
 class LoginActivity : AppCompatActivity() {
@@ -25,6 +27,4 @@ class LoginActivity : AppCompatActivity() {
             }
         })
     }
-
-
 }
