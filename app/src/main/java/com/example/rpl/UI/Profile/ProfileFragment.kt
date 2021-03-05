@@ -1,4 +1,4 @@
-package com.example.rpl.UI
+package com.example.rpl.UI.Profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,13 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.rpl.R
 
-class PlusFragment : Fragment() {
+class ProfileFragment : Fragment() {
     // TODO: Rename and change types of parameters
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_plus, container, false)
+        return inflater.inflate(R.layout.fragment_profile, container, false)
     }
 }
