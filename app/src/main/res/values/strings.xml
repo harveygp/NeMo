@@ -3,9 +3,13 @@
     <string name="Forgot_Password">Forgot Password ?</string>
     <string name="Sign_In">SIGN IN</string>
     <string name="Sign_Up">SIGN UP</string>
-    <string name="bnv_home">Home</string>
+    <string name="bnv_notes">Notes</string>
     <string name="bnv_plus">Plus</string>
     <string name="bnv_profile">Profile</string>
+    <string name="bnv_memo">Memo</string>
+
+<!--    //homepage-->
+    <string name="bnv_empty">Lonely Here...</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

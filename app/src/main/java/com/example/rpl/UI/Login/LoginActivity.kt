@@ -6,16 +6,15 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rpl.R
-import com.example.rpl.UI.Home.HomeActivity
-import com.example.rpl.UI.Home.HomeFragment
 import com.example.rpl.UI.MainActivity
-import kotlinx.android.synthetic.main.login_activity.*
+import com.example.rpl.UI.SignUp.SignUpActivity
+import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_activity)
+        setContentView(R.layout.fragment_login)
 
         SignIn.setOnClickListener(View.OnClickListener {
             var name = Username.text.toString().trim()
@@ -27,6 +26,10 @@ class LoginActivity : AppCompatActivity() {
             }else{
                 Toast.makeText(this, "SALAH JANCOK", Toast.LENGTH_SHORT).show()
             }
+        })
+
+        SignUp.setOnClickListener(View.OnClickListener {
+            startActivity(Intent(this, SignUpActivity::class.java))
         })
     }
 }

@@ -10,10 +10,6 @@
 
     <solid android:color="#FF5C00"/>
     <corners android:radius="20dp"/>
-    <gradient
-        android:startColor="@color/colorPrimary_Nemo_Orange"
-        android:endColor="@color/colorPrimary_Nemo_Cream"
-        />
 
     <padding
         android:left="20dp"

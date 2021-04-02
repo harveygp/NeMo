@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.example.rpl.R
-import com.example.rpl.UI.Home.HomeFragment
+import com.example.rpl.UI.Notes.NotesFragment
 import com.example.rpl.UI.Plus.PlusFragment
-import com.example.rpl.UI.Profile.ProfileFragment
+import com.example.rpl.UI.Profile.MemoFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity(),BottomNavigationView.OnNavigationItemSe
     }
 
     private fun initiateUi(){
-        loadFragment(HomeFragment())
+        loadFragment(NotesFragment())
         BottomNavigation.setOnNavigationItemSelectedListener(this)
     }
 
@@ -37,14 +37,14 @@ class MainActivity : AppCompatActivity(),BottomNavigationView.OnNavigationItemSe
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.bnv_home -> loadFragment(
-                HomeFragment()
+            R.id.bnv_Notes -> loadFragment(
+                NotesFragment()
             )
             R.id.bnv_plus -> loadFragment(
                 PlusFragment()
             )
-            R.id.bnv_profile -> loadFragment(
-                ProfileFragment()
+            R.id.bnv_Memo -> loadFragment(
+                MemoFragment()
             )
         }
         return true
