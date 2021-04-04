@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import com.example.rpl.R
 import com.example.rpl.UI.Notes.NotesFragment
 import com.example.rpl.UI.Plus.PlusFragment
-import com.example.rpl.UI.Profile.MemoFragment
+import com.example.rpl.UI.Memo.MemoFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 

@@ -1,4 +1,4 @@
-package com.example.rpl.UI.Profile
+package com.example.rpl.UI.Memo
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -16,4 +16,6 @@ class MemoFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_memo, container, false)
     }
+
+
 }

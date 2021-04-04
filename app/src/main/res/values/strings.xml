@@ -7,6 +7,9 @@
     <string name="bnv_plus">Plus</string>
     <string name="bnv_profile">Profile</string>
     <string name="bnv_memo">Memo</string>
+    <string name="title_memo">Title</string>
+    <string name="date_memo">Date</string>
+    <string name="date_time">Time</string>
 
 <!--    //homepage-->
     <string name="bnv_empty">Lonely Here...</string>

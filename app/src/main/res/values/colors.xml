@@ -9,4 +9,6 @@
     <color name="colorPrimary_Nemo_Brown">#A77E40</color>
     <color name="colorPrimaryWhite">#FFFFFF</color>
     <color name="dark">#000000</color>
+    <color name="gray">#C4C4C4</color>
+    <color name="transparent">#00000000</color>
 </resources>
