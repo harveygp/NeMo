@@ -38,7 +38,6 @@
                 android:drawableStart="@drawable/ic_baseline_person_24"
                 android:drawablePadding="30dp"
                 android:hint="Username"
-                android:textColorHint="#000000"
                 android:textSize="@dimen/small"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rabbitLogin" />
@@ -52,7 +51,7 @@
                 android:drawablePadding="30dp"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:textColorHint="#000000"
+
                 android:textSize="@dimen/small"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Username" />
