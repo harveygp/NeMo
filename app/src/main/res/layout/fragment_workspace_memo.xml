@@ -103,10 +103,64 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
+            android:id="@+id/Table"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:backgroundTint="@color/transparent"
-            />
+            android:src="@drawable/ic_table"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/PointList"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/Bold"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/transparent"
+            android:src="@drawable/ic_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Table"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/Italic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/transparent"
+            android:src="@drawable/ic_italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/Underline"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/transparent"
+            android:src="@drawable/ic_underline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Italic"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/TextColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/transparent"
+            android:src="@drawable/ic_textcolor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Underline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/Marker"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/transparent"
+            android:src="@drawable/ic_marker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/TextColor"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
