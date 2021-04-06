@@ -11,7 +11,7 @@
 
 <!--    login page -->
     <string name="firstName">First Name</string>
-    <string name="secondName">Second Name</string>
+    <string name="secondName">Last Name</string>
     <string name="username">Username</string>
     <string name="Email">Email Address</string>
     <string name="password">Password</string>

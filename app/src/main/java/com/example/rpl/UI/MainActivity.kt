@@ -10,12 +10,18 @@ import com.example.rpl.UI.Plus.PlusFragment
 import com.example.rpl.UI.Profile.MemoFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_signup.*
 
 class MainActivity : AppCompatActivity(),BottomNavigationView.OnNavigationItemSelectedListener  {
+
+//    var getUser = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var getUser = intent
+//      getUser = getUser.getStringExtra("username")
+        getUser.getStringExtra("username")
 
         initiateUi()
     }
