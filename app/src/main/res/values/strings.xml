@@ -26,4 +26,6 @@
 <!--    setting-->
     <string name="tutorial_text">Tutorial</string>
     <string name="credit_text">Credit</string>
+    <string name="theme_text">Theme</string>
+    <string name="premium_text">Go Premium</string>
 </resources>
