@@ -1,4 +1,4 @@
-package com.example.rpl.UI.Plus
+package com.example.rpl.ui.Plus
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

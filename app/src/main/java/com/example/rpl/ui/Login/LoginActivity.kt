@@ -1,4 +1,4 @@
-package com.example.rpl.UI.Login
+package com.example.rpl.ui.Login
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rpl.R
-import com.example.rpl.UI.MainActivity
-import com.example.rpl.UI.SignUp.SignUpActivity
+import com.example.rpl.ui.HomeActivity
+import com.example.rpl.ui.SignUp.SignUpActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
                     override fun onDataChange(snapshot: DataSnapshot) {
                         if(snapshot.hasChild("Data${nameUser}")){
                             if (pw.equals(snapshot.child("Data${nameUser}").child("password").value.toString())){
-                                val changeActivity = Intent(this@LoginActivity, MainActivity::class.java)
+                                val changeActivity = Intent(this@LoginActivity, HomeActivity::class.java)
                                 changeActivity.putExtra("username", nameUser)
                                 startActivity(changeActivity)
                             }else{

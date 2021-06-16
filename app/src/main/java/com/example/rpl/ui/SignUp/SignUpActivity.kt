@@ -1,4 +1,4 @@
-package com.example.rpl.UI.SignUp
+package com.example.rpl.ui.SignUp
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,9 +6,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rpl.R
-import com.example.rpl.UI.Login.LoginActivity
-import com.example.rpl.UI.MainActivity
-import com.example.rpl.UI.RegisterActivity
+import com.example.rpl.ui.Login.LoginActivity
+import com.example.rpl.ui.RegisterActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase

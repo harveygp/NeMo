@@ -1,4 +1,4 @@
-package com.example.rpl.UI
+package com.example.rpl.ui
 
 class RegisterActivity(private var name: String, private var email: String, private var username: String, private var password: String) {
     init {

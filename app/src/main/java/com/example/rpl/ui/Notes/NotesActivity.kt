@@ -1,4 +1,4 @@
-package com.example.rpl.UI.Notes
+package com.example.rpl.ui.Notes
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
