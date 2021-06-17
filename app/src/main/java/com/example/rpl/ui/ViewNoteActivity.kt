@@ -7,22 +7,22 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.rpl.model.Mail
-import com.android.mailapp.viewmodel.MailViewModel
+import com.example.rpl.model.Notes
+import com.android.mailapp.viewmodel.NoteViewModel
 import com.example.rpl.R
-import kotlinx.android.synthetic.main.activity_view_mail.*
+import kotlinx.android.synthetic.main.activity_view_note.*
 
-class ViewMailActivity : AppCompatActivity() {
+class ViewNoteActivity : AppCompatActivity() {
 
-    private var notes: Mail? = null
-    private lateinit var notesViewModel: MailViewModel
+    private var notes: Notes? = null
+    private lateinit var notesViewModel: NoteViewModel
 
     companion object{
 
         const val INTENT_NOTE_ADD = "intent_note_add"
 
-        fun launchDetailNote(activity: AppCompatActivity, notes: Mail){
-            val intent = Intent(activity, ViewMailActivity::class.java)
+        fun launchDetailNote(activity: AppCompatActivity, notes: Notes){
+            val intent = Intent(activity, ViewNoteActivity::class.java)
             intent.putExtra(INTENT_NOTE_ADD, notes)
             activity.startActivity(intent)
         }
@@ -30,8 +30,8 @@ class ViewMailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_view_mail)
-        notesViewModel = ViewModelProvider(this).get(MailViewModel::class.java)
+        setContentView(R.layout.activity_view_note)
+        notesViewModel = ViewModelProvider(this).get(NoteViewModel::class.java)
 
         handleIntent()
         initUI()
@@ -39,7 +39,7 @@ class ViewMailActivity : AppCompatActivity() {
 
         val backToMainActivity = findViewById<View>(R.id.btn_detail_note_back)
         backToMainActivity.setOnClickListener {
-            startActivity(Intent(this@ViewMailActivity, HomeActivity::class.java))
+            onBackPressed()
         }
     }
 
@@ -51,22 +51,26 @@ class ViewMailActivity : AppCompatActivity() {
         updateUI(notes)
     }
 
-    private fun updateUI(notes: Mail?) {
+    private fun updateUI(notes: Notes?) {
         tv_mail_title.text = notes?.emailAddress
         tv_mail_content.text = notes?.emailContent
     }
 
     private fun listener() {
-        buttonDelete.setOnClickListener {
+        btn_delete_note.setOnClickListener {
             notesViewModel.deleteMail(notes?.id ?: 0)
             finish()
+        }
+
+        btn_edit_note.setOnClickListener {
+            CreateNoteActivity.launchAddNotePage(this)
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == ComposeMailActivity.REQUEST_CODE_ADD && resultCode == Activity.RESULT_OK){
-            data?.getParcelableExtra<Mail>(ComposeMailActivity.INTENT_NOTE)?.let { notes ->
+        if (requestCode == CreateNoteActivity.REQUEST_CODE_ADD && resultCode == Activity.RESULT_OK){
+            data?.getParcelableExtra<Notes>(CreateNoteActivity.INTENT_NOTE)?.let { notes ->
                 this.notes?.let { oldNote ->
                     oldNote.emailAddress = notes.emailAddress
                     oldNote.emailContent = notes.emailContent

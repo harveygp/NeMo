@@ -9,23 +9,23 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.rpl.adapter.ComposeMailAdapter
-import com.example.rpl.model.Mail
-import com.android.mailapp.viewmodel.MailViewModel
+import com.example.rpl.adapter.CreateNoteAdapter
+import com.example.rpl.model.Notes
+import com.android.mailapp.viewmodel.NoteViewModel
 import com.example.rpl.R
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class HomeActivity : AppCompatActivity() {
 
-    private var mailAdapter: ComposeMailAdapter? = null
-    private lateinit var mailViewModel: MailViewModel
+    private var mailAdapter: CreateNoteAdapter? = null
+    private lateinit var mailViewModel: NoteViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        mailViewModel = ViewModelProvider(this).get(MailViewModel::class.java)
+        mailViewModel = ViewModelProvider(this).get(NoteViewModel::class.java)
 
         initiateUI()
         listener()
@@ -43,14 +43,14 @@ class HomeActivity : AppCompatActivity() {
 
     private fun listener() {
         fabAddNote.setOnClickListener {
-            ComposeMailActivity.launchAddNotePage(this@HomeActivity)
+            CreateNoteActivity.launchAddNotePage(this@HomeActivity)
         }
     }
 
     private fun initiateUI(){
         if (mailAdapter == null){
-            mailAdapter = ComposeMailAdapter(this, seeMoreDetails = { notes ->
-                ViewMailActivity.launchDetailNote(this, notes)
+            mailAdapter = CreateNoteAdapter(this, seeMoreDetails = { notes ->
+                ViewNoteActivity.launchDetailNote(this, notes)
             })
             with(rv_mail_list_inbox){
                 layoutManager = LinearLayoutManager(this@HomeActivity)
@@ -63,8 +63,8 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == ComposeMailActivity.REQUEST_CODE_ADD && resultCode == Activity.RESULT_OK){
-            data?.getParcelableExtra<Mail>(ComposeMailActivity.INTENT_NOTE)?.let { notes ->
+        if (requestCode == CreateNoteActivity.REQUEST_CODE_ADD && resultCode == Activity.RESULT_OK){
+            data?.getParcelableExtra<Notes>(CreateNoteActivity.INTENT_NOTE)?.let { notes ->
                 mailViewModel.composeMail(notes)
             }
         } else {

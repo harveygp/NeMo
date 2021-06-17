@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RPL</string>
+    <string name="app_name">NeMo</string>
     <string name="Forgot_Password">Forgot Password ?</string>
     <string name="Sign_In">SIGN IN</string>
     <string name="Sign_Up">SIGN UP</string>
@@ -9,7 +9,7 @@
     <string name="bnv_memo">Memo</string>
 
 
-<!--    login page -->
+    <!--    login page -->
     <string name="firstName">First Name</string>
     <string name="secondName">Last Name</string>
     <string name="username">Username</string>
@@ -32,12 +32,12 @@
     <string name="bnv_draft">Draft</string>
     <string name="bnv_Spam">Spam</string>
 
-    <string name="hint_title">email address</string>
+    <string name="hint_title">Title</string>
     <string name="hint_subject">Subject</string>
-    <string name="title_main">Inbox</string>
-    <string name="button_save">Send Mail</string>
+    <string name="title_main">NeMo</string>
+    <string name="button_save">Save</string>
     <string name="empty_not_saved">discarded</string>
-    <string name="hint_desc">…</string>
+    <string name="hint_desc">Content</string>
     <string name="title_compose_mail">Compose Mail</string>
 
     <string name="title_draft">Drafts</string>

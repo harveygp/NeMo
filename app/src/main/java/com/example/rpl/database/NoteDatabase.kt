@@ -4,24 +4,24 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.rpl.dao.MailDao
-import com.example.rpl.model.Mail
+import com.example.rpl.dao.NotesDao
+import com.example.rpl.model.Notes
 
 
 @Database(
-    entities = [Mail::class],
+    entities = [Notes::class],
     version = 1,
     exportSchema = false
 )
-abstract class MailDatabase: RoomDatabase() {
+abstract class NoteDatabase: RoomDatabase() {
 
-    abstract fun mailDao(): MailDao
+    abstract fun mailDao(): NotesDao
 
     companion object{
         @Volatile
-        private var INSTANCE: MailDatabase? = null
+        private var INSTANCE: NoteDatabase? = null
 
-        fun getDatabase(context: Context): MailDatabase {
+        fun getDatabase(context: Context): NoteDatabase {
             val tempInstance = INSTANCE
             if (tempInstance != null){
                 return tempInstance
@@ -30,7 +30,7 @@ abstract class MailDatabase: RoomDatabase() {
             synchronized(this){
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    MailDatabase::class.java,
+                    NoteDatabase::class.java,
                     "note_database"
                 ).build()
                 INSTANCE = instance

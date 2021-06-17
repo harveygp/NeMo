@@ -7,7 +7,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Entity(tableName = "mail_list")
 @Parcelize
-data class Mail(
+data class Notes(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     var emailAddress: String,

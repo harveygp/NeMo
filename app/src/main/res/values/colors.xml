@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimary">#FF5C00</color>
     <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimaryLight">#FFDCA7</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="colorPrimary_Nemo_Orange">#FF5C00</color>
     <color name="colorPrimary_Nemo_Yellow">#FEC73A</color>
@@ -9,6 +10,11 @@
     <color name="colorPrimary_Nemo_Brown">#A77E40</color>
     <color name="colorPrimaryWhite">#FFFFFF</color>
     <color name="dark">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="ic_rabbit_login_background">#3DDC84</color>
+    <color name="ic_notes_empty_background">#3DDC84</color>
+    <color name="ic_memos_empty_background">#3DDC84</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>

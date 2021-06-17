@@ -4,7 +4,8 @@
         <!-- Customize your theme here. -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:navigationBarColor">@color/colorBlack</item>
+        <item name="android:navigationBarColor">@color/colorWhite</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
     </style>
 
     <style name="word_title">

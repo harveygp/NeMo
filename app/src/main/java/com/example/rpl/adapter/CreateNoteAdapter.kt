@@ -8,22 +8,22 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.example.rpl.model.Mail
+import com.example.rpl.model.Notes
 import com.example.rpl.R
 
-class ComposeMailAdapter(
+class CreateNoteAdapter(
     context: Context,
-    private val seeMoreDetails: ((Mail) -> Unit)? = null
-): RecyclerView.Adapter<ComposeMailAdapter.MailViewHolder>() {
+    private val seeMoreDetails: ((Notes) -> Unit)? = null
+): RecyclerView.Adapter<CreateNoteAdapter.MailViewHolder>() {
 
     private val inflater = LayoutInflater.from(context)
-    private var mailInbox = emptyList<Mail>()
+    private var mailInbox = emptyList<Notes>()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): MailViewHolder {
-        val itemView = inflater.inflate(R.layout.item_mail, parent, false)
+        val itemView = inflater.inflate(R.layout.item_note, parent, false)
         return MailViewHolder(itemView)
     }
 
@@ -48,7 +48,7 @@ class ComposeMailAdapter(
         val emailItem: ConstraintLayout = itemView.findViewById(R.id.item_email)
     }
 
-    internal fun composeMail(mail: List<Mail>){
+    internal fun composeMail(mail: List<Notes>){
         this.mailInbox = mail
         notifyDataSetChanged()
     }
